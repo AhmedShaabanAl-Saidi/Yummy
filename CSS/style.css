@@ -1,0 +1,350 @@
+/* general */
+body {
+  background-color: #0d0d0d;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+/* media */
+@media (max-width: 768px) {
+  .custom-col-md-3 {
+    width: 80% !important;
+  }
+
+  .custom-col-inputs {
+    width: 90% !important;
+  }
+
+  .custom-ms-auto {
+    margin-left: auto !important;
+  }
+
+  .search .searchByName {
+    margin-bottom: 1.25rem;
+  }
+}
+
+
+body.light-mode {
+  background-color: #e8e8e8;
+  color: #000000 !important;
+}
+
+body.light-mode h1,
+body.light-mode h2,
+body.light-mode h3,
+body.light-mode h4,
+body.light-mode h5,
+body.light-mode h6,
+body.light-mode p,
+body.light-mode span,
+body.light-mode .glitch {
+  color: #000000 !important;
+}
+
+body.light-mode .Copyright i,
+body.light-mode .Copyright p,
+body.light-mode .area h3,
+body.light-mode .ingredient h3,
+body.light-mode .ingredient p {
+  color: white !important;
+}
+
+body.light-mode .recipeName{
+  color: rgb(251, 201, 17) !important;
+}
+
+/* scrollbar */
+/* WebKit browsers */
+::-webkit-scrollbar {
+  width: 0.75rem;
+}
+
+::-webkit-scrollbar-track {
+  background: #555;
+  border-radius: 0.625rem;
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgb(251, 201, 17);
+  border-radius: 0.625rem;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: rgb(187, 153, 28);
+}
+
+/* loading */
+.glitch {
+  position: relative;
+  font-size: 25px;
+  font-weight: 700;
+  line-height: 1.2;
+  color: #fff;
+  letter-spacing: 5px;
+  z-index: 1;
+  animation: shift 1s ease-in-out infinite alternate;
+}
+
+.glitch:before,
+.glitch:after {
+  display: block;
+  content: attr(data-glitch);
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0.8;
+}
+
+.glitch:before {
+  animation: glitch 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94) both infinite;
+  color: #8b00ff;
+  z-index: -1;
+}
+
+.glitch:after {
+  animation: glitch 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94) reverse both infinite;
+  color: #00e571;
+  z-index: -2;
+}
+
+@keyframes glitch {
+  0% {
+    transform: translate(0);
+  }
+
+  20% {
+    transform: translate(-3px, 3px);
+  }
+
+  40% {
+    transform: translate(-3px, -3px);
+  }
+
+  60% {
+    transform: translate(3px, 3px);
+  }
+
+  80% {
+    transform: translate(3px, -3px);
+  }
+
+  to {
+    transform: translate(0);
+  }
+}
+
+@keyframes shift {
+
+  0%,
+  40%,
+  44%,
+  58%,
+  61%,
+  65%,
+  69%,
+  73%,
+  100% {
+    transform: skewX(0deg);
+  }
+
+  41% {
+    transform: skewX(10deg);
+  }
+
+  42% {
+    transform: skewX(-10deg);
+  }
+
+  59% {
+    transform: skewX(40deg) skewY(10deg);
+  }
+
+  60% {
+    transform: skewX(-40deg) skewY(-10deg);
+  }
+
+  63% {
+    transform: skewX(10deg) skewY(-5deg);
+  }
+
+  70% {
+    transform: skewX(-50deg) skewY(-20deg);
+  }
+
+  71% {
+    transform: skewX(10deg) skewY(-10deg);
+  }
+}
+
+.img-overly {
+  width: 100%;
+  height: 100%;
+  top: 100%;
+  left: 0;
+  color: #000000;
+  background-color: rgba(255, 255, 255, .9);
+  transition: all .5s;
+  cursor: pointer;
+}
+
+.meal:hover .img-overly,
+.category:hover .img-overly {
+  top: 0;
+}
+
+.search,
+.categories,
+.area,
+.ingredients,
+.contact,
+.recipe {
+  display: none;
+}
+
+.area .inner,
+.ingredient .inner {
+  color: #FFFFFF;
+  transition: all 0.5s;
+}
+
+#area .inner:hover,
+#ingredient .inner:hover {
+  color: rgb(251, 201, 17) !important;
+  cursor: pointer;
+}
+
+.form-control:focus {
+  background-color: #0d0d0d;
+  border-color: rgb(251, 201, 17);
+  box-shadow: 0 0 0 0.25rem rgba(251, 201, 17, 0.25);
+}
+
+.recipe,
+.ingredient {
+  color: #FFFFFF;
+}
+
+/* The switch - the box around the slider */
+.switch {
+  font-size: 17px;
+  position: relative;
+  display: inline-block;
+  width: 3.5em;
+  height: 2em;
+}
+
+/* Hide default HTML checkbox */
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+/* The slider */
+.slider {
+  --background: #28096b;
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: var(--background);
+  transition: .5s;
+  border-radius: 30px;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 1.4em;
+  width: 1.4em;
+  border-radius: 50%;
+  left: 10%;
+  bottom: 15%;
+  box-shadow: inset 8px -4px 0px 0px #fff000;
+  background: var(--background);
+  transition: .5s;
+}
+
+input:checked+.slider {
+  background-color: #522ba7;
+}
+
+input:checked+.slider:before {
+  transform: translateX(100%);
+  box-shadow: inset 15px -4px 0px 15px #fff000;
+}
+
+/* Search */
+.search .form-control {
+  background-color: #0d0d0d;
+  color: #fff;
+}
+
+.search input::placeholder {
+  color: #6c757d;
+  opacity: 1;
+}
+
+.searchLoader {
+  display: none;
+}
+
+/* Contact */
+.contact .form-control:focus {
+  background-color: #FFFFFF;
+}
+
+.contact .form-control {
+  background-color: #FFFFFF;
+  color: #000000;
+}
+
+/* aside */
+aside {
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  z-index: 999;
+}
+
+.aside-info {
+  background-color: #0d0d0d;
+  display: none;
+}
+
+aside li {
+  font-size: 1.125rem;
+  font-weight: bold;
+  list-style: none;
+  cursor: pointer;
+  margin-bottom: .9375rem;
+  transition: all 0.4s;
+  display: none;
+}
+
+aside i {
+  transition: all 0.4s;
+}
+
+aside li:hover,
+aside i:hover {
+  cursor: pointer;
+  color: rgb(251, 201, 17);
+}
+
+aside a {
+  text-decoration: none;
+}
+
+.aside-logo img {
+  width: 3.125rem;
+  height: 3.125rem;
+  object-fit: cover;
+}
+
+.aside-close {
+  display: none;
+}

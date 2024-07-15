@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Yummy Website For Food Recipes" />
+    <link rel="shortcut icon" href="CSS/IMG/logo.ico" type="image/x-icon">
+    <title>Yummy</title>
+    <!-- bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <!-- font awesome -->
+    <link rel="stylesheet" href="./CSS/all.min.css">
+    <!-- google fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@300..700&display=swap" rel="stylesheet">
+    <!-- main style -->
+    <link rel="stylesheet" href="./CSS/style.css">
+</head>
+
+<body>
+    <!-- aside -->
+    <aside class="d-flex align-items-center ">
+        <div class="aside-info">
+            <div class="aside-info-inner d-flex flex-column justify-content-between p-4 vh-100 text-white">
+                <ul class="ps-0">
+                    <li>Search</li>
+                    <li>Categories</li>
+                    <li>Area</li>
+                    <li>Ingredients</li>
+                    <li>Contact Us</li>
+                </ul>
+                <div class="Copyright">
+                    <div class="copyright-icons">
+                        <i class="fa-brands fa-facebook"></i>
+                        <i class="fa-brands fa-twitter"></i>
+                        <i class="fa-solid fa-globe"></i>
+                        <p>Copyright 2024 Company name<br>Designed by <a
+                                href="https://www.linkedin.com/in/ahmedshaabanal-saedy/"
+                                target="_blank">AhmedShaaban</a>
+                            <br> All rights
+                            reserved
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="aside-icons bg-white p-2 vh-100 d-flex flex-column justify-content-between align-items-center">
+            <div class="aside-logo">
+                <img src="CSS/IMG/logo.png" alt="aside-icons">
+            </div>
+            <div class="aside-close">
+                <i class="fa-solid open-close-icon fa-2x fa-x"></i>
+            </div>
+            <div class="aside-open">
+                <i class="fa-solid open-close-icon fa-2x fa-align-justify"></i>
+            </div>
+            <div class="toggle">
+                <label class="switch">
+                    <input type="checkbox">
+                    <span class="slider"></span>
+                </label>
+            </div>
+            <div class="aside-icon">
+                <i class="fa-solid fa-globe d-block"></i>
+                <i class="fa-solid fa-share-nodes mt-1"></i>
+            </div>
+        </div>
+    </aside>
+
+    <!-- default page -->
+    <section class="default-page">
+        <div class="container">
+            <div class="row g-3 displayMeals py-5">
+                <!-- loading -->
+                <div
+                    class="loader d-flex justify-content-center align-items-center position-fixed top-0 start-0 end-0 bottom-0">
+                    <div data-glitch="Loading..." class="glitch" id="glitch">Loading...</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Search -->
+    <section class="search">
+        <div class="container">
+            <div class="row pt-4 pb-5">
+                <div class="col-md-6 custom-col-md-3 custom-ms-auto">
+                    <input class="form-control searchByName" type="text" placeholder="Search By Name">
+                </div>
+                <div class="col-md-6 custom-col-md-3 custom-ms-auto">
+                    <input class="form-control searchByFirstLetter" type="text" placeholder="Search By First Letter">
+                </div>
+            </div>
+            <div class="row g-3 pb-5 displaySearchedMeals">
+                <!-- loading -->
+                <div class="searchLoader">
+                    <div class="loader d-flex justify-content-center align-items-center">
+                        <div data-glitch="Loading..." class="glitch" id="glitch">Loading...</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Recipe -->
+    <section class="recipe py-5">
+        <div class="container">
+            <div class="row displayRecipe">
+                <!-- loading -->
+                <div
+                    class="loader d-flex justify-content-center align-items-center position-fixed top-0 start-0 end-0 bottom-0">
+                    <div data-glitch="Loading..." class="glitch" id="glitch">Loading...</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Categories -->
+    <section class="categories py-5">
+        <div class="container">
+            <div class="row g-3 displayCategories">
+                <!-- loading -->
+                <div
+                    class="loader d-flex justify-content-center align-items-center position-fixed top-0 start-0 end-0 bottom-0">
+                    <div data-glitch="Loading..." class="glitch" id="glitch">Loading...</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Area -->
+    <section class="area py-5">
+        <div class="container">
+            <div class="row g-4 displayAreas">
+                <!-- loading -->
+                <div
+                    class="loader d-flex justify-content-center align-items-center position-fixed top-0 start-0 end-0 bottom-0">
+                    <div data-glitch="Loading..." class="glitch" id="glitch">Loading...</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Ingredients -->
+    <section class="ingredients py-5">
+        <div class="container">
+            <div class="row g-4 displayIngredients">
+                <!-- loading -->
+                <div
+                    class="loader d-flex justify-content-center align-items-center position-fixed top-0 start-0 end-0 bottom-0">
+                    <div data-glitch="Loading..." class="glitch" id="glitch">Loading...</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact -->
+    <section class="contact">
+        <div class="contact-overly d-flex justify-content-center align-items-center vh-100">
+            <div class="Contact-info w-75">
+                <div class="container">
+                    <form action="">
+                        <div class="row g-3">
+                            <div class="col-md-6 custom-col-inputs custom-ms-auto">
+                                <input class="form-control inputName" type="text" placeholder="Enter Your Name">
+                                <div class="alert alert-danger mt-2 d-none" id="nameAlert">
+                                    Special characters and numbers not allowed
+                                </div>
+                            </div>
+                            <div class="col-md-6 custom-col-inputs custom-ms-auto">
+                                <input class="form-control inputEmail" type="email" placeholder="Enter Your Email">
+                                <div class="alert alert-danger w-100 mt-2 d-none" id="emailAlert">
+                                    Email not valid *exemple@yyy.zzz
+                                </div>
+                            </div>
+                            <div class="col-md-6 custom-col-inputs custom-ms-auto">
+                                <input class="form-control inputPhone" type="tel" placeholder="Enter Your Phone">
+                                <div class="alert alert-danger w-100 mt-2 d-none" id="phoneAlert">
+                                    Enter valid Phone Number
+                                </div>
+                            </div>
+                            <div class="col-md-6 custom-col-inputs custom-ms-auto">
+                                <input class="form-control inputAge" type="number" placeholder="Enter Your Age">
+                                <div class="alert alert-danger w-100 mt-2 d-none" id="ageAlert">
+                                    Enter valid age
+                                </div>
+                            </div>
+                            <div class="col-md-6 custom-col-inputs custom-ms-auto">
+                                <input class="form-control inputPassword" type="password"
+                                    placeholder="Enter Your Password">
+                                <div class="alert alert-danger w-100 mt-2 d-none" id="passwordAlert">
+                                    Enter valid password *Minimum eight characters, at least one
+                                    letter and one number:*
+                                </div>
+                            </div>
+                            <div class="col-md-6 custom-col-inputs custom-ms-auto">
+                                <input class="form-control inputRepassword" type="password" placeholder="Repassword">
+                                <div class="alert alert-danger w-100 mt-2 d-none" id="repasswordAlert">
+                                    Enter valid repassword
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="d-flex justify-content-center align-items-center mt-2">
+                            <button class="btn btn-outline-danger mt-3 disabled" id="submitBtn">Submit</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- jquery -->
+    <script src="JS/jquery-3.7.1.min.js"></script>
+    <!-- bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+        crossorigin="anonymous"></script>
+    <!-- main JS -->
+    <script src="JS/main.js"></script>
+</body>
+
+</html>
